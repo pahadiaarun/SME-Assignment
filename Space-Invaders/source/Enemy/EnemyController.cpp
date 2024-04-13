@@ -50,7 +50,7 @@ namespace Enemy
 
 	sf::Vector2f EnemyController::getRandomInitialPosition()
 	{
-		float x_offset_distance = (std::rand() % static_cast<int>(enemy_model->right_most_position.x - enemy_model->left_most_position.x));
+		float x_offset_distance = static_cast<float>(std::rand() % static_cast<int>(enemy_model->right_most_position.x - enemy_model->left_most_position.x));
 		float x_position = enemy_model->left_most_position.x + x_offset_distance;
 		float y_position = enemy_model->left_most_position.y;
 
